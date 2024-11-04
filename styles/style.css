@@ -1,0 +1,499 @@
+/* Algemene opmaak */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+  /* Bron: MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face */
+
+@font-face {
+  font-family: "Grotesk";
+  src: url('../fonts/RightGrotesk-Variable.woff2') format('woff2');
+}
+
+body {
+  color: #000000;
+  background-color: #f4f6f9;
+  font-family: 'Grotesk', sans-serif;
+}
+
+main {
+  background-color: #ffffff;
+  z-index: -1;
+  position: relative;
+}
+
+section, footer, nav {
+  max-width: 1224px;
+  padding: 0 1em;
+  margin: 0 auto;
+}
+
+hr {
+  opacity: 0.05;
+}
+/* Bron: CSS Tricks Flexbox Guide: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+header {
+  display: flex;
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding: 2em 0;
+  align-items: center;
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1em;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+}
+header nav ul h1 {
+  margin-right: 0.625em;
+}
+
+header nav ul li {
+  font-weight: 600;
+}
+
+header nav ul li:nth-child(6) {
+  margin-left: auto;
+  margin-right: 0.625rem;
+  color: black;
+}
+
+header nav ul li a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.625em;
+}
+
+header nav ul button {
+  background-color: #006aff;
+  padding: 0.7em 1em;
+  outline: 0;
+  border: none;
+  border-radius: 2em;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+
+header nav button:last-of-type {
+  background-color: transparent;
+  border: 3px solid #006aff;
+  color: #006aff;
+}
+
+header nav ul li:last-child {
+  display: none;
+  color: white;
+  margin-left: auto;
+}
+
+header nav ul li:last-child img {
+  width: 1.5em;
+}
+/* Bron: MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries */
+
+@media (max-width: 1024px) {
+  header nav ul li, header nav ul button {
+    display: none;
+  }
+  header nav ul li:last-child {
+    display: block;
+  }
+}
+/* Bron: CSS Tricks Flexbox Guide: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+main > section:first-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4em;
+  max-width: 100%;
+  position: relative;
+}
+
+
+main > section:first-of-type::before {
+  content: "";
+  background-color: #006aff;
+  height: 100%;
+  width: 55%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+main > section:first-of-type::after {
+  content: "";
+  background-color: #b3e5ff;
+  height: 100%;
+  width: 45%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+
+main > section:first-of-type article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 768px;
+  padding-right: 10%;
+  margin-top: 1.5em;
+  color: white;
+}
+
+main > section:first-of-type article > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+main > section:first-of-type figure {
+  display: flex;
+  justify-content: flex-start;
+  width: 375px;
+}
+
+main > section:first-of-type figure img {
+  margin-top: 10rem;
+}
+
+main > section:first-of-type h2 {
+  font-size: 4.75rem;
+  margin: 0;
+}
+
+main > section:first-of-type p {
+  margin: 1.25em 0;
+  font-size: 1.375rem;
+}
+/* Bron: CSS Button Styling Guide: https://css-tricks.com/almanac/properties/b/button/ */
+
+main > section:first-of-type button {
+  padding: 0.8rem 1.8rem;
+  background-color: white;
+  color: #000000;
+  outline: 0;
+  border: none;
+  border-radius: 2rem;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: box-shadow .3s ease-in-out;
+  margin-right: 0.8em;
+  margin-bottom: 1em;
+}
+
+main > section:first-of-type button:hover {
+  box-shadow: 0px 12px 32px -16px rgba(30,40,53,1);
+}
+
+@media (max-width: 1224px) {
+  main > section:first-of-type article {
+    max-width: 568px;
+  }
+  main > section:first-of-type h2 {
+    font-size: 2.5rem;
+  }
+  main > section:first-of-type p {
+    font-size: 1.375rem;
+  } 
+
+  main > section:first-of-type figure img {
+    width: 275px;
+  }
+}
+
+@media (max-width: 1024px) {
+  main > section:first-of-type {
+    padding-top: 5em;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main > section:first-of-type figure {
+    justify-content: center;
+  }
+
+  main > section:first-of-type figure img {
+    margin-top: 2rem;
+    width: 275px;
+  }
+
+  main > section:first-of-type article {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 1em;
+  }
+
+  main > section:first-of-type h2 {
+    font-size: 2.5rem;
+  }
+  
+  main > section:first-of-type::before {
+    width: 100%;
+  }
+  
+  main > section:first-of-type::after {
+    display: none;
+  }
+  
+
+}
+
+main > section:nth-of-type(2) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3.125em;
+}
+
+main > section:nth-of-type(2) img {
+  max-width: 12.5em;
+  height: auto;
+  width: 325px;
+  flex: 1 1 100px;
+}
+
+main > section:nth-of-type(3) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 3.125em;
+  gap: 2em;
+}
+
+main > section:nth-of-type(3) figure {
+  position: relative;
+  width: 350px;
+  height: 600px;
+  background-color: #ffebc9;
+}
+
+main > section:nth-of-type(3) figure img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: calc(50% - 300px / 2);
+  right: 0;
+}
+
+main > section:nth-of-type(3) article {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  max-width: 600px;
+}
+
+main > section:nth-of-type(3) article h2 {
+  font-size: 3.25rem;
+  max-width: 500px;
+}
+
+main > section:nth-of-type(3) article p {
+  font-size: 1.25rem;
+  max-width: 575px;
+  font-weight: 400;
+}
+
+main > section:nth-of-type(3) article ul {
+  line-height: 3rem;
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+
+main > section:nth-of-type(3) article li {
+  display: flex;
+  align-items: center;
+}
+
+main > section:nth-of-type(3) article li::before {
+  content: '';
+  background-image: url('../images/check.svg');
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 0.5rem;
+}
+
+main > section:nth-of-type(3) article > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+main > section:nth-of-type(3) button {
+  padding: 0.8rem 1.8rem;
+  background-color: rgb(26, 121, 255);
+  color: white;
+  outline: 0;
+  border: none;
+  border-radius: 2rem;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: box-shadow .3s ease-in-out;
+  margin-right: 0.8em;
+  margin-bottom: 1em;
+}
+
+main > section:nth-of-type(3) button:hover {
+  box-shadow: 0px 12px 32px -16px rgba(30,40,53,1);
+}
+
+@media (max-width: 768px) {
+  main > section:nth-of-type(3) {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.125em;
+  }
+
+  main > section:nth-of-type(3) figure {
+    width: 100%;
+    height: auto;
+  }
+
+  main > section:nth-of-type(3) figure img {
+    position: relative;
+    top: 0;
+  }
+
+  main > section:nth-of-type(3) article h2 {
+    font-size: 2rem;
+
+  }
+  main > section:nth-of-type(3) article ul {
+    font-size: 1rem;
+  }
+
+
+  main > section:nth-of-type(3) article li::before {
+    width: 32px;
+    height: 32px;
+    margin-right: 1rem;
+  }
+
+}
+/* Bron: Coolors kleurenpalet generator: https://coolors.co/ */
+
+footer {
+  padding: 3em 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+footer section {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 200px;
+}
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+footer h2 {
+  margin-top: 2em;
+}
+
+footer ul a {
+  display: block;
+}
+
+body > section:nth-last-of-type(2) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  padding: 2em 0;
+  width: 100%;
+}
+
+body > section:nth-last-of-type(2) p {
+  width: 400px;
+  opacity: 0.5;
+}
+
+body > section:nth-last-of-type(2) img:first-of-type {
+  margin-left: auto;
+}
+
+body > section:last-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+}
+
+body > section:last-of-type p {
+  margin-right: auto;
+}
+
+body > section:last-of-type a {
+  color: inherit;
+  opacity: 0.5;
+  margin-right: 0.8em;
+  text-decoration: none;
+}
+
+body > section:last-of-type a:hover {
+  text-decoration: underline;
+  opacity: 1;
+  text-underline-offset: 0.3em;
+}
+
+@media (max-width: 768px) {
+  footer ul {
+    flex-direction: column;
+  }
+
+  body > section:nth-last-of-type(2) img:first-of-type {
+    margin-left: 0px;
+    margin-top: 1em;
+  }
+
+  body > section:nth-last-of-type(2), body > section:last-of-type {
+    padding: 1em;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  body > section:last-of-type p {
+    margin: 0 auto 1em;
+  }
+
+  body > section:last-of-type a {
+    margin: 0.5em;
+  }
+}
