@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
 }
-  /* Bron: MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face */
 
 @font-face {
   font-family: "Grotesk";
@@ -32,7 +31,6 @@ section, footer, nav {
 hr {
   opacity: 0.05;
 }
-/* Bron: CSS Tricks Flexbox Guide: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 
 header {
   display: flex;
@@ -111,7 +109,6 @@ header nav ul li:last-child {
 header nav ul li:last-child img {
   width: 1.5em;
 }
-/* Bron: MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries */
 
 @media (max-width: 1024px) {
   header nav ul li, header nav ul button {
@@ -121,7 +118,6 @@ header nav ul li:last-child img {
     display: block;
   }
 }
-/* Bron: CSS Tricks Flexbox Guide: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 
 main > section:first-of-type {
   display: flex;
@@ -191,7 +187,6 @@ main > section:first-of-type p {
   margin: 1.25em 0;
   font-size: 1.375rem;
 }
-/* Bron: CSS Button Styling Guide: https://css-tricks.com/almanac/properties/b/button/ */
 
 main > section:first-of-type button {
   padding: 0.8rem 1.8rem;
@@ -400,7 +395,6 @@ main > section:nth-of-type(3) button:hover {
   }
 
 }
-/* Bron: Coolors kleurenpalet generator: https://coolors.co/ */
 
 footer {
   padding: 3em 1em;
@@ -496,4 +490,53 @@ body > section:last-of-type a:hover {
   body > section:last-of-type a {
     margin: 0.5em;
   }
+}
+
+
+@media (prefers-color-scheme: dark) {
+	main {
+		background: #1F1F1F;
+	}
+	body {
+		color: #FFFFFF;
+		background: #111111;
+	}
+
+  a:hover {
+    color: rgb(200, 200, 200);
+  }
+
+  header {
+    background-color: #1F1F1F;
+  }
+  header nav ul h1,
+  header nav ul li a {
+    color: #FFFFFF;
+  }
+
+  main > section:first-of-type::before {
+    background-color: #1F1F1F;
+  }
+  main > section:first-of-type::after {
+    background-color: #2C2C2C;
+  }
+
+  main > section:nth-of-type(3) figure {
+    background-color: #2C2C2C;
+  }
+
+	footer ul a {
+	  color: #FFFFFF;
+	}
+  
+	body > section:last-of-type p,
+	body > section:last-of-type a {
+	  color: #FFFFFF;
+	  opacity: 0.7;
+	}
+	
+	body > section:last-of-type a:hover {
+	  opacity: 1;
+	}
+
 }
