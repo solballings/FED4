@@ -1,0 +1,315 @@
+nav ul {
+  color: var(--text-color);
+}
+
+main > section:first-of-type {
+	display: flex;
+	flex-direction: column;
+	max-width: 100%;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	padding: 10em 3.125em;
+	padding-bottom: 2em;
+	gap: 2em;
+}
+  
+main > section:first-of-type figure img {
+	width: 100%;
+}
+  
+main > section:first-of-type article {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	max-width: 600px;
+}
+  
+main > section:first-of-type article h2 {
+	font-size: 3.25rem;
+}
+  
+main > section:first-of-type article p {
+	font-size: 2rem;
+	font-weight: 400;
+}
+  
+main > section:first-of-type article > div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+  
+main > section:first-of-type button {
+	padding: 0.8rem 1.8rem;
+	background-color: var(--primary);
+	color: white;
+	outline: 0;
+	border: none;
+	border-radius: 2rem;
+	font-family: inherit;
+	font-weight: 700;
+	font-size: 1.1rem;
+	transition: box-shadow 0.3s ease-in-out;
+	margin-right: 0.8em;
+	margin-bottom: 1em;
+}
+  
+main > section:first-of-type button:hover {
+	box-shadow: 0 12px 32px -16px var(--box-shadow-color);
+}
+  
+@media (max-width: 768px) {
+  main > section:first-of-type {
+	  flex-direction: column;
+	  align-items: center;
+	  padding: inherit 1.125em;
+	}
+  
+  main > section:first-of-type figure {
+	  width: 100%;
+	  height: auto;
+	}
+  
+  main > section:first-of-type figure img {
+	  position: relative;
+	  top: 0;
+	}
+  
+  main > section:first-of-type article h2 {
+	  font-size: 2rem;
+	}
+}
+  
+main > section:nth-child(2) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding: 10em 3.125em;
+	gap: 2em;
+}
+  
+main > section:nth-child(2) article:first-of-type {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	max-width: 600px;
+}
+  
+main > section:nth-child(2) article:first-of-type h2 {
+	font-size: 3.25rem;
+}
+  
+main > section:nth-child(2) article:first-of-type p {
+	font-size: 1.125rem;
+	font-weight: 400;
+}
+  
+main > section:nth-child(2) article:first-of-type > div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+  
+main > section:nth-child(2) button {
+	background-color: var(--primary);
+	color: var(--button-text-color);
+	outline: 0;
+	border: none;
+	border-radius: 2rem;
+	font-family: inherit;
+	font-size: 1.1rem;
+	transition: box-shadow 0.3s ease-in-out;
+}
+  
+main > section:nth-child(2) button:hover {
+	box-shadow: 0 12px 32px -16px var(--box-shadow-color);
+}
+  
+main > section:nth-child(2) section {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--bg);
+	box-shadow: 0 0 4px var(--box-shadow-color);
+	border-radius: 1em;
+	gap: 2em;
+	padding: 1.25em;
+	max-width: 500px;
+	min-width: 500px;
+}
+  
+main > section:nth-child(2) section article:first-of-type {
+	display: flex;
+	flex-direction: row;
+	gap: 1.2rem;
+}
+
+main > section:nth-child(2) section time {
+	background-color: var(--text-color);
+	color: var(--bg);
+	min-width: 60px;
+	min-height: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+  
+main > section:nth-child(2) section article:first-of-type div {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+  
+main > section:nth-child(2) section article:first-of-type div p {
+	opacity: 0.5;
+	font-size: 0.8rem;
+}
+  
+main > section:nth-child(2) section article:first-of-type div address {
+	opacity: 0.5;
+	font-style: normal;
+	font-size: 0.8rem;
+}
+  
+main > section:nth-child(2) article:first-of-type div h2 {
+	font-size: 1rem;
+}
+  
+main > section:nth-child(2) section time span:first-child {
+	font-size: 0.8rem;
+}
+  
+main > section:nth-child(2) section time span:last-child {
+	font-size: 1.4rem;
+}
+  
+main > section:nth-child(2) section ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+  
+main > section:nth-child(2) section ul li {
+	display: grid;
+	grid-template-columns: 1fr repeat(4, max-content);
+	grid-template-rows: 1fr 1fr;
+	align-items: center;
+	gap: 0.5em;
+	padding: 0.5em 0;
+}
+  
+main > section:nth-child(2) section ul li p {
+	margin: 0;
+}
+  
+main > section:nth-child(2) section ul li p:nth-of-type(1) {
+	grid-column-start: 1;
+	grid-row-start: 1;
+}
+  
+main > section:nth-child(2) section ul li p:nth-of-type(2) {
+	grid-column-start: 1;
+	grid-row-start: 2;
+	opacity: 0.5;
+	font-weight: 400;
+}
+  
+main > section:nth-child(2) section ul li p strong {
+	font-size: 1.25rem;
+}
+  
+main > section:nth-child(2) section ul li button,
+main > section:nth-child(2) section ul li output {
+	grid-row: 1 / 3;
+}
+  
+main > section:nth-child(2) section ul li button {
+	background-color: var(--primary-light);
+	color: var(--primary);
+	border: none;
+	border-radius: 1em;
+	line-height: 0;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+  
+main > section:nth-child(2) section ul li button:nth-of-type(1) {
+	grid-column-start: 2;
+}
+  
+main > section:nth-child(2) section ul li button:nth-of-type(2) {
+	grid-column-start: 4;
+}
+  
+main > section:nth-child(2) section ul li output:nth-of-type(1) {
+	grid-column-start: 3;
+	width: 2em;
+	display: flex;
+	justify-content: center;
+}
+  
+main > section:nth-child(2) section ul li output:nth-of-type(2) {
+	grid-column-start: 5;
+	width: 4em;
+	display: flex;
+	justify-content: flex-end;
+}
+  
+main > section:nth-child(2) section ul:last-of-type {
+	display: flex;
+	justify-content: space-between;
+}
+  
+main > section:nth-child(2) section ul:last-of-type h3,
+main > section:nth-child(2) section ul:last-of-type p {
+	margin: 0;
+}
+  
+main > section:nth-child(2) section ul:last-of-type p {
+	opacity: 0.5;
+}
+  
+main > section:nth-child(2) section ul:last-of-type button {
+	padding: 0.8rem 1.8rem;
+	background-color: var(--primary);
+	color: white;
+	border: none;
+	align-self: center;
+	border-radius: 2rem;
+	font-family: inherit;
+	font-weight: 700;
+	font-size: 1.1rem;
+	cursor: pointer;
+	transition: box-shadow 0.3s ease-in-out;
+}
+  
+main > section:nth-child(2) section ul:last-of-type button:hover {
+	box-shadow: 0 12px 32px -16px var(--box-shadow-color);
+}
+  
+@media (max-width: 1024px) {
+  main > section:nth-child(2) {
+    flex-direction: column;
+    align-items: center;
+    gap: 4em;
+  }
+    
+  main > section:nth-child(2) article:first-of-type {
+    text-align: center;
+  }
+    
+  main > section:nth-child(2) section {
+    max-width: 100%;
+    min-width: 80%;
+  }
+    
+  main > section:nth-child(2) article h2 {
+    font-size: 2rem;
+  }
+}

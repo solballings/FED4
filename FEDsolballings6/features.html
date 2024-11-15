@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventix - Ticketing voor jouw evenementen</title>
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/features-style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <h1>Eventix</h1>
+                <li><a href="">Features</a></li>
+                <li><a href="#">Branches</a></li>
+                <li><a href="#">Hulpbronnen</a></li>
+                <li><a href="#">Tarieven</a></li>
+                <li><a href="#">Support & contact</a></li>
+                <button>Gratis aanmelden</button>
+                <button>Inloggen</button>
+                <li>
+                    <a aria-label="toggle menu">
+                        <img src="images/bars-solid.svg" alt="toggle menu">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <figure>
+                <img src="images/features.svg" alt="foto features">
+            </figure>
+            <article>
+                <h2>Een ticketshop gemaakt voor conversie</h2>
+                <p>Aanpasbaar aan jouw wensen en branding</p>
+                <div>
+                    <button>Shop aanmaken</button>
+                    <button>Demo inplannen</button>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h2>Jouw tickets binnen handbereik</h2>
+                <p>Met onze mobile-friendly ticketshops kunnen ticketkopers gemakkelijk en snel afrekenen. Het maken van een ticketshop is heel eenvoudig. Je kunt hem als iFrame in je website integreren of door ons op een aparte webpagina laten hosten.</p>
+            </article>
+        
+            <section>
+                <article>
+                    <time>
+                        <span>JUN</span>
+                        <span>19</span>
+                    </time>
+                    <div>
+                        <h2>Outdoor Festival</h2>
+                        <p>Tue Jun 19 09:00 - Tue Jun 21 22:00</p>
+                        <address>Edelstraat 38, 3910 AB, Eindhoven</address>
+                    </div>
+                </article>
+        
+                <ul>
+                    <li>
+                        <p><strong>Early Bird</strong></p>
+                        <p>€10.00</p>
+                        <button onclick="decrement(event, 10)">-</button>
+                        <output data-amount="0">0</output>
+                        <button onclick="increment(event, 10)">+</button>
+                        <output data-value="0">€0.00</output>
+                    </li>
+                    <li>
+                        <p><strong>Normal Ticket</strong></p>
+                        <p>€12.50</p>
+                        <button onclick="decrement(event, 12.50)">-</button>
+                        <output data-amount="0">0</output>
+                        <button onclick="increment(event, 12.50)">+</button>
+                        <output data-value="0">€0.00</output>
+                    </li>
+                    <li>
+                        <p><strong>Late Bird</strong></p>
+                        <p>€15.00</p>
+                        <button onclick="decrement(event, 15.00)">-</button>
+                        <output data-amount="0">0</output>
+                        <button onclick="increment(event, 15.00)">+</button>
+                        <output data-value="0">€0.00</output>
+                    </li>
+                </ul>
+        
+                <ul>
+                    <li>
+                        <h3>Total</h3>
+                        <p id="total" data-value="0">€0.00</p>
+                    </li>
+                    <button>Continue</button>
+                </ul>
+            </section>
+        </section>        
+
+    </main>
+
+    <footer>
+        <section>
+            <h2>Eventix</h2>
+        </section>
+        <section>
+            <ul>
+                <h2>Features</h2>
+                <li>Ticket shop</li>
+                <li>Tracking</li>
+                <li>Entreemanagement</li>
+                <li>Integraties</li>
+                <li>Dashboard</li>
+                <li>Financiën</li>
+                <li>Support</li>
+                <li>Veilige doorverkoop</li>
+            </ul>
+            <ul>
+                <h2>Voor organisatoren</h2>
+                <li>Product help</li>
+                <li>Tarieven</li>
+                <li>Contact</li>
+            </ul>
+        </section>
+        <section>
+            <ul>
+                <h2>Meer Eventix</h2>
+                <li>Werken bij Eventix</li>
+                <li>API documentatie</li>
+                <li>Over Eventix</li>
+                <li>Blog</li>
+                <li>Pers</li>
+            </ul>
+        </section>
+        <section>
+            <ul>
+                <h2>Direct contact</h2>
+                <a href="mailto:tickets@eventix.nl">tickets@eventix.nl</a>
+                <a href="tel:tickets@00310858883007">+31(0)85 888 3007</a>
+            </ul>
+            <ul>
+                <h2>Kantoor</h2>
+                <address>
+                    <p>Van Diemenstraat 292</p>
+                    <p>1013CR Amsterdam</p>
+                    <p>Netherlands</p>
+                </address>
+                <address>
+                    <p>Jan van Lieshoutstraat 23</p>
+                    <p>5611 EE Eindhoven</p>
+                    <p>Netherlands</p>
+                </address>
+            </ul>
+        </section>
+    </footer>
+
+    <section>
+        <p>Eventix is een Nederlands kaartverkoopsysteem dat ticketshop-systemen, online tickets verkopen en ondersteuning bij de kaartverkoop van evenementen aanbiedt.</p>
+        <img src="./images/linkedin.svg" alt="linkedin">
+        <img src="./images/facebook.svg" alt="facebook">
+        <img src="./images/instagram.svg" alt="instagram">
+    </section>
+
+    <section>
+        <p>Nederlands</p>
+        <a href="">Privacyverklaring</a>
+        <a href="">Algemene voorwaarden bezoekers</a>
+        <a href="">Algemene voorwaarden organisatoren</a>
+        <a href="">Subverwerkers</a>
+    </section>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>
